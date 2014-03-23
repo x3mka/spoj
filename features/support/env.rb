@@ -3,12 +3,13 @@ require 'aruba/in_process'
 
 require 'spoj/cli'
 
-Aruba::InProcess.main_class = Spoj::CLI::Runner
-Aruba.process = Aruba::InProcess
+#Aruba::InProcess.main_class = Spoj::CLI::Runner
+#Aruba.process = Aruba::InProcess
 
 
 
-PROJECT_ROOT = File.join(File.dirname(__FILE__),'..','..')
+PROJECT_ROOT = File.expand_path('../..',File.dirname(__FILE__))
+ENV['PATH'] = "#{File.join(PROJECT_ROOT,'bin')}#{File::PATH_SEPARATOR}#{ENV['PATH']}"
 ARUBA_DIR = File.join(%w(tmp aruba))
 
 Before do

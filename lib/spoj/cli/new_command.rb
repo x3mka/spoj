@@ -18,8 +18,10 @@ module Spoj
 
       def create_files
         template('spoj/config.yml', "#{app_name}/spoj/config.yml")
-        template('spec/spec_helper.rb', "#{app_name}/spec/spec_helper.rb")
+        template('spoj/problems/spec_helper.rb', "#{app_name}/spoj/problems/spec_helper.rb")
         template('Rakefile', "#{app_name}/Rakefile")
+        template('Gemfile', "#{app_name}/Gemfile")
+        template('.rspec', "#{app_name}/.rspec")
       end
 
       def banner

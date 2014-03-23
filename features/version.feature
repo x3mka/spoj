@@ -6,4 +6,4 @@ Feature: Version command
   Scenario: Show the cli version
     When I run `spoj version`
     Then the output should contain "0.0.1"
-    And the exit status should not be 0
+    And the exit status should be 0

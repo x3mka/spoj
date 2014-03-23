@@ -12,7 +12,6 @@ module Spoj
       def version
         require_relative '../version'
         puts Spoj::VERSION #Gem.loaded_specs['spoj'].version
-        exit(0)
       end
 
       # register(class_name, subcommand_alias, usage_list_string, description_string)

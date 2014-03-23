@@ -1,0 +1,8 @@
+source 'http://rubygems.org'
+
+#gem 'spoj', :path => '../../../'
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rake'
+end
